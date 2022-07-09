@@ -11,7 +11,7 @@ class Bridge(QObject):
         image_path = Path('pokemon_image.png')
         try:
             if image_path.exists():
-               print('Deletando imagem...')
+               #print('Deletando imagem...')
                image_path.unlink()
             response = get(f'https://pokeapi.co/api/v2/pokemon/{pokemon_id}').json()
             image_url = response['sprites']['other']['home']['front_default']
