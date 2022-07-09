@@ -1,8 +1,9 @@
 from PySide6.QtCore import Qt 
 from PySide6.QtGui import QFont
-from PySide6.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
+from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QMenuBar
 
 app = QApplication()
+window = QMainWindow()
 base = QWidget()
 layout = QVBoxLayout()
 
@@ -21,4 +22,10 @@ layout.addWidget (botao)
 
 base.setLayout(layout)
 base.show()
+
+window.setCentralWidget(base)
+menu = window.menuBar()
+menu.addMenu("File")
+
+window.show()
 app.exec()
