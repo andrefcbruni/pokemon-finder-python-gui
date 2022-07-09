@@ -25,6 +25,10 @@ ApplicationWindow {
         Button {
             text: "Search!"
             width: 200
+            onClicked: {
+                var fetch_return = bridge.fetch_image(pokemon_id.text)
+                label.text = fetch_return[1]
+            }
         }
     }
     Label {
