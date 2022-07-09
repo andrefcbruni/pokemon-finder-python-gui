@@ -27,15 +27,15 @@ class Window(QMainWindow):
         base.setLayout(layout)
         base.show()
         self.setCentralWidget(base)
+
         menu = self.menuBar()
         file_menu = menu.addMenu("File")
         action = QAction("Print!")
         action.triggered.connect(callback)
-        file_menu.addAction(action)
-    
-    def muda_label(self):
-        self.label.setText("Clicado")  
+        file_menu.addAction(action)    
 
+    def muda_label(self):
+        self.label.setText("Clicado")
 app = QApplication()
 app.setStyleSheet(load_stylesheet())
 window = Window()
