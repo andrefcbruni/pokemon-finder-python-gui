@@ -27,6 +27,8 @@ ApplicationWindow {
             width: 200
             onClicked: {
                 var fetch_return = bridge.fetch_image(pokemon_id.text)
+                pokemon_id.text = ''
+                img.source = ''
                 label.text = fetch_return[1]
                 img.source = fetch_return[0]
             }
