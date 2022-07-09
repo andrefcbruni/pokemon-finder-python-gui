@@ -1,6 +1,4 @@
 import PySide6
-
-
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtGui import QGuiApplication
 
