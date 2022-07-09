@@ -51,7 +51,7 @@ ApplicationWindow {
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: row.top
-            topMargin: 80
+            topMargin: 60
         }
     }
 }
