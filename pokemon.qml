@@ -28,6 +28,7 @@ ApplicationWindow {
             onClicked: {
                 var fetch_return = bridge.fetch_image(pokemon_id.text)
                 label.text = fetch_return[1]
+                img.source = fetch_return[0]
             }
         }
     }
@@ -44,5 +45,11 @@ ApplicationWindow {
         id: img
         width: 300
         height: 300
+        cache: false
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            top: row.top
+            topMargin: 80
+        }
     }
 }
